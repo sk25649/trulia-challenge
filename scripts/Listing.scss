@@ -1,0 +1,58 @@
+.listing {
+	display: flex;
+	padding: 5px;
+	margin: 2px;
+	border: 1px solid #e5e5e5;
+	width: 48%;
+	position: relative;
+
+	img {
+		width: 150px;
+		height: 150px;
+	}
+
+	.descriptions {
+		display: flex;
+		flex-direction: column;
+		height: 150px;
+		padding: 10px 5px;
+		max-width: 250px;
+
+		ul {
+			padding: 0;
+
+			li {
+			  display: inline;
+			  font-size: 12px;
+			}
+		}
+
+		.item:before {
+			content: '\2022';
+			margin: 0 4px;
+		}
+
+		.address {
+			font-size: 20px;
+			color: #2772ea;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-weight: 500;
+			overflow-x: hidden;
+			min-height: 28px;
+		}
+
+		.price {
+			font-size: 40px;
+		}
+	}
+
+	.built {
+		position: absolute;
+		top: 5px;
+		right: 8px;
+		font-size: 10px;
+		white-space: nowrap;
+	}
+
+}

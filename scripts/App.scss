@@ -1,0 +1,30 @@
+.widget-container {
+	padding: 10px;
+
+	.btn-group {
+		display: flex;
+		width: 49%;
+
+		.btn {
+			flex: 1 1 auto;
+			background-color: #2dd771;
+			display: flex;
+			justify-content: space-evenly;
+
+			&.active {
+				background-color: #70B2F3;
+			}
+
+			.fa {
+				position: relative;
+				top: 2px;
+			}
+		}
+	}
+
+	.listing-container {
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 10px;
+	}
+}
