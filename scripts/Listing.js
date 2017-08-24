@@ -14,10 +14,12 @@ class Listing extends Component {
 		const sqft =
 			!_.isEmpty(this.props.sqft) ?
 				<li className="item">{this.props.sqft} sq ft</li> : null;
+		const imgLink =
+			!_.isEmpty(this.props.img) ? this.props.img : "../default.png";
 
 		return (
 			<div className="listing">
-				<img src={this.props.img} />
+				<img src={imgLink} />
 				<div className="descriptions">
 					<span className="address texts">{addressParts[0]}</span>
 					<span className="address texts">{addressParts[1]}</span>
