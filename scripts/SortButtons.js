@@ -19,10 +19,9 @@ class SortButtons extends Component {
 	}
 
 	render = () => {
-		let chevronClassName = "fa fa-chevron-down";
-		if(_.isEqual(this.state.sortDirection, SortDirection.ASC)) {
-			chevronClassName = "fa fa-chevron-up";
-		}
+		const chevronClassName =
+			_.isEqual(this.state.sortDirection, SortDirection.ASC) ?
+				"fa fa-chevron-up" : "fa fa-chevron-down";
 
 		let buttonComps = [];
 		for(const rule of SortRule.enumValues) {
@@ -52,9 +51,7 @@ class SortButtons extends Component {
 		}
 
 		return (
-			<ButtonGroup
-				onClick={this.onChange}
-			>
+			<ButtonGroup onClick={this.onChange}>
 				{buttonComps}
 			</ButtonGroup>
 		);

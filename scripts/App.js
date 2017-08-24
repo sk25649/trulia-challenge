@@ -22,11 +22,13 @@ class App extends Component {
 	}
 
 	componentWillMount = () => {
-		const listings = _.assign(this.parseBatman(batman), this.parseSuperman(superman.items));
-		const sorted = _.sortBy(_.values(listings), [this.state.sortRule.name.toLowerCase()]);
-		this.setState({
-			listings: sorted.reverse()
-		});
+		const sorted = _.sortBy(
+			_.values(
+				_.assign(this.parseBatman(batman), this.parseSuperman(superman.items))
+			),
+			[this.state.sortRule.name.toLowerCase()]
+		);
+		this.setState({listings: sorted.reverse()});
 	}
 
 	render = () => {
@@ -78,14 +80,8 @@ class App extends Component {
 
 	onClick = (sortRule, direction) => {
 		const listings = _.sortBy(_.values(this.state.listings), [sortRule.name.toLowerCase()]);
-		if(_.isEqual(direction, SortDirection.DESC)) {
-			listings.reverse();
-		}
-		this.setState({
-			sortRule,
-			direction,
-			listings
-		});
+		if(_.isEqual(direction, SortDirection.DESC)) listings.reverse();
+		this.setState({sortRule, direction, listings});
 	}
 }
 
