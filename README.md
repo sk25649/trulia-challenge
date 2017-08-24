@@ -18,10 +18,15 @@ npm install
 npm start
 Open http://localhost:3000
 ```
-### screenshot
+### Screenshots
 
-### Trade-off made
+### Decisions Made
+- Data was given in two different json files so instead of creating an API end point to fetch those files, I simply used json-loader to mimic API payloads.
+- Sample img didn't specify if sorting direction is required, so I implemented ascending and descending. Different sorting can be achieved by clicking on sort button again.
+- Img is fixed to 150x150, but listing is flex.
+- If image link isn't avilable, grey default image will be displayed.
+- If square footage and built year are missing those will not be displayed but listing will still display.
+- Address and Price are must have.
 
 ### Thoughts
-
-
+- I was given batmanReality.json and supermanReality.json, but they were in two different format. Normally, you wouldn't use two APIs in different format for same type of data. This would be poor API design and poor contract between client and server.
