@@ -19,6 +19,8 @@ npm start
 Open http://localhost:3000
 ```
 ### Screenshots
+![normal screenshot](https://github.com/sk25649/trulia-challenge/blob/master/normal.png)
+![grey default](https://github.com/sk25649/trulia-challenge/blob/master/grey-default.png)
 
 ### Decisions Made
 - Data was given in two different json files so instead of creating an API end point to fetch those files, I simply used json-loader to mimic API payloads.
