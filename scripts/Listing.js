@@ -22,10 +22,10 @@ class Listing extends Component {
 			<div className="listing">
 				<img src={this.props.img} />
 				<div className="descriptions">
-					<span className="address">{addressParts[0]}</span>
-					<span className="address">{addressParts[1]}</span>
-					<span className="price">${Number(this.props.price).toLocaleString()}</span>
-					<ul>
+					<span className="address texts">{addressParts[0]}</span>
+					<span className="address texts">{addressParts[1]}</span>
+					<span className="price texts">${Number(this.props.price).toLocaleString()}</span>
+					<ul className="texts">
 						<li>{this.props.beds} Beds</li>
 						<li className="item">{this.props.baths} Baths</li>
 						{sqft}
