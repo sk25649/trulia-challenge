@@ -1,18 +1,20 @@
 import _ from 'lodash';
+
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Listing.scss';
 
-export default class Listing extends Component {
+class Listing extends Component {
 	render() {
 		const addressParts = this.parseAddress(this.props.address);
 		let built = null;
-		if(!_.isEmpty(this.props.built)) {
+		if (!_.isEmpty(this.props.built)) {
 			built = <span className="built">Build in {this.props.built}</span>
 		}
 
 		let sqft = null;
-		if(!_.isEmpty(this.props.sqft)) {
+		if (!_.isEmpty(this.props.sqft)) {
 			sqft = <li className="item">{this.props.sqft} sq ft</li>;
 		}
 
@@ -41,3 +43,16 @@ export default class Listing extends Component {
 		return [street, rest];
 	}
 }
+
+Listing.PropTypes = {
+	address: PropTypes.string,
+	price: PropTypes.string,
+	beds: PropTypes.string,
+	baths: PropTypes.string,
+	sqft: PropTypes.string,
+	img: PropTypes.string,
+	url: PropTypes.string,
+	built: PropTypes.string
+};
+
+export default Listing;

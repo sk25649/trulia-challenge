@@ -77,6 +77,15 @@ module.exports = {
         test: /\.jsx?$/,
         loaders: ['babel'],
         include: path.join(__dirname, 'scripts')
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        test: /\.scss/,
+        loaders: ['style', 'css', 'sass-loader'],
+        include: path.join(__dirname, 'scripts')
       }
     ]
   }

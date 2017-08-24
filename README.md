@@ -1,28 +1,27 @@
-# React ES6 Webpack Boilerplate
+# Trulia Front End Engineer Challenge
 
-Boilerplate for kick starting a project with the following technologies:
+This project uses following tech stacks:
 * [React](https://github.com/facebook/react)
+* [React-Bootstrap](https://react-bootstrap.github.io/)
 * [Babel 6](http://babeljs.io)
 * [Webpack](http://webpack.github.io) for bundling
+* [style-loader](https://github.com/webpack-contrib/style-loader)
+* [Sass-loader](https://github.com/webpack-contrib/sass-loader)
+* [Json-loader](https://webpack.js.org/loaders/json-loader/) for mimicing API response
 * [Webpack Dev Server](http://webpack.github.io/docs/webpack-dev-server.html)
 * [React Transform](https://github.com/gaearon/react-transform-hmr) for hot reloading React components in real time.
-
-The various webpack options used have been explained in detailed as comments in the config file. Should help with understanding the nitty-gritty :)
-
 
 ### Usage
 
 ```
 npm install
 npm start
-Open http://localhost:5000
+Open http://localhost:3000
 ```
+### screenshot
 
-### Linting
+### Trade-off made
 
-ESLint with React linting options have been enabled.
+### Thoughts
 
-```
-npm run lint
-```
 

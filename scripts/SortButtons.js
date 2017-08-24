@@ -2,13 +2,14 @@ import _ from 'lodash';
 
 import React, { Component } from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 import SortRule from './SortRule.js';
 import SortDirection from './SortDirection.js';
 
 const LABLES = ["Price", "Beds", "Sq. ft."];
 
-export default class SortButtons extends Component {
+class SortButtons extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -77,3 +78,9 @@ export default class SortButtons extends Component {
 	}
 
 }
+
+SortButtons.PropTypes = {
+	onClick: PropTypes.func
+}
+
+export default SortButtons;

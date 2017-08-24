@@ -10,6 +10,7 @@
 			background-color: #2dd771;
 			display: flex;
 			justify-content: space-evenly;
+			max-width: 160px;
 
 			&.active {
 				background-color: #70B2F3;
